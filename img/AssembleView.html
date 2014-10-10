@@ -1,0 +1,36 @@
+<div class='blurImg'>
+  <div style="background-image: url('img/Header.jpg')"></div>
+  <div class='blur' style="background-image: url('img/Header-blur.jpg')"></div>
+</div>
+<header>
+  <div id="myheader">
+    <a href='<%= permalink_url %>' title='Soundcloud page'>
+    	<img src="<%= artwork_url %>">
+    	<span id="title"><%= title %></span>
+    </a>
+    
+    
+  </div>
+  <nav id="mynav" role='navigation'>
+    <ul>
+      <li>
+        <a href='#'><span class="icon fa-play fa-2x track-icons" title='Play' style="background:white;padding-left: 24px !important;"></span></a>
+      </li>
+      <li>
+        <a href='http://api.soundcloud.com/tracks/<%=id%>/download?client_id=38375d12a650d8319a9f4d8cb4e9fd82'><span class="icon fa-download fa-2x track-icons" title='Download'></span></a>
+      </li>
+      <li>
+        <a href='#'><span class="icon fa-share fa-2x track-icons" title='Share'></span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class='mycontainer'>
+  <div>
+  	<ul>
+  	<% _.each(window.arrayOfLines, function(i) { %> <li><%= i %></li>  <% }); %>
+  	</ul>
+  </div>
+</div>
+
+</header>
